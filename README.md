@@ -2,16 +2,23 @@
 This is a implementation of ST-Norm. The implementations of backbone [Wavenet](https://github.com/nnzhan/Graph-WaveNet) and [TCN](https://github.com/locuslab/TCN) are cited from published resources.
 
 # Requirements
-python 3.7  
-numpy >= 1.17.4  
-pandas >= 1.0.3  
-pytorch >= 1.4.0
+Python 3.7  
+Numpy >= 1.17.4  
+Pandas >= 1.0.3  
+Pytorch >= 1.4.0
 
  
 ## Model Training
 ```
 python main.py --mode train --model wavenet --snorm 1 --tnorm 1 --dataset bike
 ```
+### Settings
+model: backbone architecture (wavenet / tcn / transformer).  
+snorm: whether use spatial normalization.  
+tnorm: whether use temporal normalization.  
+dataset: dataset name.  
+version: version number.  
+hidden_channels: number of hidden channels.  
 
 ## Model Evaluation
 ```
