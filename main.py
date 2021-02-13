@@ -11,7 +11,7 @@ import numpy as np
 import math
 from models.TCN import TemporalConvNet
 from models.Transformer import Transformer
-from models.GraphWaveNet.model import gwnet
+from models.Wavenet import Wavenet
 from utils.data_utils import *
 from utils.math_utils import *
 from utils.tester import model_inference
@@ -198,7 +198,7 @@ def main():
     if args.model == 'transformer':
         model = Transformer(n, in_channels=1, n_his=n_his, n_pred=n_pred, tnorm_bool=tnorm_bool, stnorm_bool=stnorm_bool, snorm_bool=snorm_bool, hidden_channels=hidden_channels, n_layers=n_layers, n=n).cuda() # mode = 'vanilla' or 'proto' or 'co_evolve'
     if args.model == 'wavenet':
-        model = gwnet('cuda:0', n, dropout=0, supports=None, gcn_bool=gcn_bool, tnorm_bool=tnorm_bool, snorm_bool=snorm_bool, stnorm_bool=stnorm_bool, addaptadj=True, aptinit=None, in_dim=1,out_dim=n_pred, residual_channels=hidden_channels, dilation_channels=hidden_channels, skip_channels=hidden_channels, end_channels=hidden_channels, kernel_size=2, blocks=1, layers=n_layers).cuda()
+        model = Wavenet('cuda:0', n, dropout=0, supports=None, gcn_bool=gcn_bool, tnorm_bool=tnorm_bool, snorm_bool=snorm_bool, stnorm_bool=stnorm_bool, addaptadj=True, aptinit=None, in_dim=1,out_dim=n_pred, residual_channels=hidden_channels, dilation_channels=hidden_channels, skip_channels=hidden_channels, end_channels=hidden_channels, kernel_size=2, blocks=1, layers=n_layers).cuda()
 
 
     print('=' * 10)

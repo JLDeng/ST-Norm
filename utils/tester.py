@@ -1,9 +1,3 @@
-# @Time     : Jan. 10, 2019 17:52
-# @Author   : Veritas YIN
-# @FileName : tester.py
-# @Version  : 1.0
-# @IDE      : PyCharm
-# @Github   : https://github.com/VeritasYin/Project_Orion
 
 from .data_utils import gen_batch
 from .math_utils import evaluation
@@ -34,8 +28,6 @@ def model_inference(model, inputs, batch_size, n_his, n_pred, min_va_val, min_va
         raise ValueError(f'ERROR: the value of n_pred "{n_pred}" exceeds the length limit.')
     y_val, len_val = multi_pred(model, x_val, batch_size, n_his, n_pred)
     evl_val = evaluation(x_val[0:len_val, n_his:n_pred + n_his, : n, :], y_val[:, :, : n], x_stats)
-    # chks: indicator that reflects the relationship of values between evl_val and min_va_val.
-    chks = evl_val < min_va_val
     # update the metric on test set, if model's performance got improved on the validation.
     y_pred, len_pred = multi_pred(model, x_test, batch_size, n_his, n_pred)
     evl_pred = evaluation(x_test[0:len_pred, n_his:n_pred + n_his, : n, :], y_pred[:, :, : n], x_stats)

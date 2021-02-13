@@ -1,9 +1,3 @@
-# @Time     : Jan. 10, 2019 15:26
-# @Author   : Veritas YIN
-# @FileName : data_utils.py
-# @Version  : 1.0
-# @IDE      : PyCharm
-# @Github   : https://github.com/VeritasYin/Project_Orion
 
 from .math_utils import z_score
 
@@ -31,18 +25,6 @@ class Dataset(object):
 
 
 def seq_gen(len_seq, data_seq, offset, n_frame, n_route, day_slot, C_0=1):
-    '''
-    Generate data in the form of standard sequence unit.
-    :param len_seq: int, the length of target date sequence.
-    :param data_seq: np.ndarray, source data / time-series.
-    :param offset:  int, the starting index of different dataset type.
-    :param n_frame: int, the number of frame within a standard sequence unit,
-                         which contains n_his = 12 and n_pred = 9 (3 /15 min, 6 /30 min & 9 /45 min).
-    :param n_route: int, the number of routes in the graph.
-    :param day_slot: int, the number of time slots per day, controlled by the time window (5 min as default).
-    :param C_0: int, the size of input channel.
-    :return: np.ndarray, [len_seq, n_frame, n_route, C_0].
-    '''
     n_slot = day_slot
 
     tmp_seq = np.zeros((len_seq * n_slot, n_frame, n_route, C_0))
@@ -58,16 +40,6 @@ def seq_gen(len_seq, data_seq, offset, n_frame, n_route, day_slot, C_0=1):
 
 
 def data_gen(file_path, data_config, n_route, n_frame=21, day_slot=288):
-    '''
-    Source file load and dataset generation.
-    :param file_path: str, the file path of data source.
-    :param data_config: tuple, the configs of dataset in train, validation, test.
-    :param n_route: int, the number of routes in the graph.
-    :param n_frame: int, the number of frame within a standard sequence unit,
-                         which contains n_his = 12 and n_pred = 9 (3 /15 min, 6 /30 min & 9 /45 min).
-    :param day_slot: int, the number of time slots per day, controlled by the time window (5 min as default).
-    :return: dict, dataset that contains training, validation and test with stats.
-    '''
     n_train, n_val, n_test = data_config
     # generate training, validation and test data
     try:
@@ -89,13 +61,6 @@ def data_gen(file_path, data_config, n_route, n_frame=21, day_slot=288):
 
 
 def gen_batch(inputs, batch_size, dynamic_batch=False, shuffle=False, period=None):
-    '''
-    Data iterator in batch.
-    :param inputs: np.ndarray, [len_seq, n_frame, n_route, C_0], standard sequence units.
-    :param batch_size: int, the size of batch.
-    :param dynamic_batch: bool, whether changes the batch size in the last batch if its length is less than the default.
-    :param shuffle: bool, whether shuffle the batches.
-    '''
     len_inputs = len(inputs)
     if shuffle:
         idx = np.arange(len_inputs)
