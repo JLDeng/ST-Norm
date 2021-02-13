@@ -41,15 +41,15 @@ parser.add_argument('--mode', type=str, default='train')
 parser.add_argument('--stnorm', type=int, default=1)
 parser.add_argument('--snorm', type=int, default=1)
 parser.add_argument('--tnorm', type=int, default=1)
+parser.add_argument('--graph', type=int, default=1)
 parser.add_argument('--n_his', type=int, default=16)
 parser.add_argument('--n_pred', type=int, default=3)
 parser.add_argument('--n_layers', type=int, default=4)
 parser.add_argument('--hidden_channels', type=int, default=16)
 parser.add_argument('--dataset', type=str, default='bike')
-parser.add_argument('--gcn', type=int, default=1)
 args = parser.parse_args()
 
-gcn_bool = bool(args.gcn)
+gcn_bool = bool(args.graph)
 stnorm_bool = bool(args.stnorm)
 snorm_bool = bool(args.snorm)
 tnorm_bool = bool(args.tnorm)
@@ -62,7 +62,7 @@ version = args.version
 
 
 def train(model, dataset, n):
-    target_n = "g{}_st{}_s{}_t{}_hc{}_l{}_his{}_pred{}_v{}".format(args.gcn, args.stnorm, args.snorm, args.tnorm, args.hidden_channels, n_layers, n_his, n_pred, args.version)
+    target_n = "g{}_st{}_s{}_t{}_hc{}_l{}_his{}_pred{}_v{}".format(args.graph, args.stnorm, args.snorm, args.tnorm, args.hidden_channels, n_layers, n_his, n_pred, args.version)
     target_fname = '{}_{}_{}'.format(args.model, dataset_name, target_n)
     target_model_path = os.path.join('MODEL', '{}.h5'.format(target_fname))
     print('=' * 10)
