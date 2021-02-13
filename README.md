@@ -2,5 +2,5 @@
 
 ## Model Training
 ```
-python main.py --mode train --model wavenet --snorm 1 --tnorm 1
+python main.py --mode train --model wavenet --snorm 1 --tnorm 1 --dataset bike
 ```
