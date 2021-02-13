@@ -12,13 +12,16 @@ Pytorch >= 1.4.0
 ```
 python main.py --mode train --model wavenet --snorm 1 --tnorm 1 --dataset bike
 ```
-### Settings
+### Arguments
 model: backbone architecture (wavenet / tcn / transformer).  
 snorm: whether use spatial normalization.  
 tnorm: whether use temporal normalization.  
 dataset: dataset name.  
 version: version number.  
-hidden_channels: number of hidden channels.  
+hidden_channels: number of hidden channels.
+n_pred: number of output steps.
+n_his: number of input steps.
+n_layers: number of hidden layers.
 
 ## Model Evaluation
 ```
