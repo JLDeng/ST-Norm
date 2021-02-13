@@ -1,8 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Usage:
-    THEANO_FLAGS="device=gpu0" python exptBikeNYC.py
-"""
 from __future__ import print_function
 import os
 import time
