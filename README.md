@@ -1,4 +1,5 @@
 # ST-Norm
+This is a implementation of ST-Norm. The [Wavenet](https://github.com/nnzhan/Graph-WaveNet)
 
 ## Model Training
 ```
