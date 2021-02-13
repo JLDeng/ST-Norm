@@ -2,9 +2,9 @@
 This is a implementation of ST-Norm. The implementations of backbone [Wavenet](https://github.com/nnzhan/Graph-WaveNet) and [TCN](https://github.com/locuslab/TCN) are cited from published resources.
 
 # Requirements
-python 3.7 
-numpy >= 1.17.4 
-pandas >= 1.0.3 
+python 3.7  
+numpy >= 1.17.4  
+pandas >= 1.0.3  
 pytorch >= 1.4.0
 
  
