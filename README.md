@@ -18,9 +18,9 @@ snorm: whether use spatial normalization.
 tnorm: whether use temporal normalization.  
 dataset: dataset name.  
 version: version number.  
-hidden_channels: number of hidden channels.
-n_pred: number of output steps.
-n_his: number of input steps.
+hidden_channels: number of hidden channels.  
+n_pred: number of output steps.  
+n_his: number of input steps.  
 n_layers: number of hidden layers.
 
 ## Model Evaluation
