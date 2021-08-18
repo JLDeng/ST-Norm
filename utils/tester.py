@@ -9,7 +9,7 @@ import torch
 
 def multi_pred(model, seq, batch_size, n_his, n_pred, dynamic_batch=True):
     pred_list = []
-    for i in gen_batch(seq, min(batch_size, len(seq[0])), dynamic_batch=dynamic_batch):
+    for i in gen_batch(seq, min(batch_size, len(seq)), dynamic_batch=dynamic_batch):
         # Note: use np.copy() to avoid the modification of source data.
         test_seq = np.copy(i[:, 0:n_his, :, :])
         step_list = []
