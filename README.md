@@ -1,5 +1,5 @@
 # ST-Norm
-This is a implementation of ST-Norm. The implementations of backbone [Wavenet](https://github.com/nnzhan/Graph-WaveNet) and [TCN](https://github.com/locuslab/TCN) are cited from published resources.
+This is a implementation of ST-Norm. The implementations of backbone [Wavenet](https://github.com/nnzhan/Graph-WaveNet) is cited from published resources.
 
 # Requirements
 Python 3.7  
@@ -10,7 +10,7 @@ Pytorch >= 1.4.0
  
 ## Model Training
 ```
-python main.py --mode train --model wavenet --snorm 1 --tnorm 1 --dataset bike
+python main.py --mode train --snorm 1 --tnorm 1
 ```
 ### Arguments
 model: backbone architecture (wavenet / tcn / transformer).  
