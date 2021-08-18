@@ -25,5 +25,5 @@ n_layers: number of hidden layers.
 
 ## Model Evaluation
 ```
-python main.py --mode eval --model wavenet --snorm 1 --tnorm 1 --dataset bike
+python main.py --mode eval --snorm 1 --tnorm 1
 ```
