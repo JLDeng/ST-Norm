@@ -38,3 +38,13 @@ python main.py --mode eval --snorm 1 --tnorm 1
   year={2021}
 }
 ```
+```
+@misc{deng2021multiview,
+    title={A Multi-view Multi-task Learning Framework for Multi-variate Time Series Forecasting},
+    author={Jinliang Deng and Xiusi Chen and Renhe Jiang and Xuan Song and Ivor W. Tsang},
+    year={2021},
+    eprint={2109.01657},
+    archivePrefix={arXiv},
+    primaryClass={cs.LG}
+}
+```
