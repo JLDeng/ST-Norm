@@ -40,7 +40,8 @@ python main.py --mode eval --snorm 1 --tnorm 1
 ```
 ```
 @ARTICLE{9935292,
- author={Deng, Jinliang and Chen, Xiusi and Jiang, Renhe and Song, Xuan and Tsang, Ivor W.},  journal={IEEE Transactions on Knowledge and Data Engineering}, 
+ author={Deng, Jinliang and Chen, Xiusi and Jiang, Renhe and Song, Xuan and Tsang, Ivor W.},
+ journal={IEEE Transactions on Knowledge and Data Engineering}, 
  title={A Multi-View Multi-Task Learning Framework for Multi-Variate Time Series Forecasting},
  year={2022},
  volume={},
