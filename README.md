@@ -40,13 +40,14 @@ python main.py --mode eval --snorm 1 --tnorm 1
 ```
 ```
 @ARTICLE{9935292,
- author={Deng, Jinliang and Chen, Xiusi and Jiang, Renhe and Song, Xuan and Tsang, Ivor W.},
- journal={IEEE Transactions on Knowledge and Data Engineering}, 
- title={A Multi-View Multi-Task Learning Framework for Multi-Variate Time Series Forecasting},
- year={2022},
- volume={},
- number={},
- pages={1-16},
- doi={10.1109/TKDE.2022.3218803}
-}
+  author={Deng, Jinliang and Chen, Xiusi and Jiang, Renhe and Song, Xuan and Tsang, Ivor W.},
+  journal={IEEE Transactions on Knowledge and Data Engineering}, 
+  title={A Multi-View Multi-Task Learning Framework for Multi-Variate Time Series Forecasting}, 
+  year={2023},
+  volume={35},
+  number={8},
+  pages={7665-7680},
+  keywords={Task analysis;Time series analysis;Forecasting;Correlation;Multitasking;Transformers;Predictive models;Time series forecasting;deep learning;normalization;multi-view multi-task learning},
+  doi={10.1109/TKDE.2022.3218803}}
+
 ```
